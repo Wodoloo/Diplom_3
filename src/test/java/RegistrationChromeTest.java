@@ -1,7 +1,7 @@
 import helper.UserRegistration;
-import pageobjects.LoginPage;
-import pageobjects.MainPage;
-import pageobjects.RegistrationPage;
+import page_objects.LoginPage;
+import page_objects.MainPage;
+import page_objects.RegistrationPage;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 

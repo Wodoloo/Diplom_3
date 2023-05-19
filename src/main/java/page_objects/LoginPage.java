@@ -1,4 +1,4 @@
-package pageobjects;
+package page_objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,12 +6,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends MainAbstractPage {
-    //Локаторы
-    private By fieldEmailLoginPage = By.xpath("//*[@id=\"root\"]/div/main/div/form/fieldset[1]/div/div/input"); // Локатор поля "E-mail"
-    private By fieldPasswordLoginPage = By.xpath("//*[@id=\"root\"]/div/main/div/form/fieldset[2]/div/div/input"); // Локатор поля "Пароль"
-    private By buttonEnterLoginPage = By.xpath("//*[@id=\"root\"]/div/main/div/form/button");
-    private By registrationLinkLoginPage = By.xpath("//*[@id=\"root\"]/div/main/div/div/p[1]/a"); // Локатор ссылки регистрация
-    private By forgotPasswordLink = By.className("Auth_link__1fOlj");
+
+    private By fieldEmailLoginPage = By.xpath(".//fieldset[1]//input");
+    //private By fieldEmailLoginPage = By.xpath(".//input[(@class='text input__textfield text_type_main-default') and (@name='name')]");
+    private By fieldPasswordLoginPage = By.xpath(".//fieldset[2]//input");
+    //private By fieldPasswordLoginPage = By.xpath(".//input[(@class='text input__textfield text_type_main-default') and (@name='Пароль')]");
+    private By buttonEnterLoginPage = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
+    private By registrationLinkLoginPage = By.xpath(".//a[@href='/register']");
+    private By forgotPasswordLink = By.xpath(".//a[@href='/forgot-password']");
 
     //Конструктор
     public LoginPage(WebDriver driver) {

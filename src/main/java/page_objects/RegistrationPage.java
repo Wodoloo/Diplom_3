@@ -1,5 +1,4 @@
-package pageobjects;
-
+package page_objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,12 +7,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegistrationPage extends MainAbstractPage {
     // Локаторы
-    private final By fieldNameRegistrationPage = By.xpath("//*[@id=\"root\"]/div/main/div/form/fieldset[1]/div/div/input");
-    private final By fieldEmailRegistrationPage = By.xpath("//*[@id=\"root\"]/div/main/div/form/fieldset[2]/div/div/input");
-    private final By fieldPasswordRegistrationPage = By.xpath("//*[@id=\"root\"]/div/main/div/form/fieldset[3]/div/div/input");
-    private final By buttonRegistrationRegistrationPage = By.xpath("//*[@id=\"root\"]/div/main/div/form/button");
-    private final By errorMessageRegistrationPage = By.xpath("//*[@id=\"root\"]/div/main/div/form/fieldset[3]/div/p");
-    private final By enterLinkRegistrationPage = By.className("Auth_link__1fOlj");
+    private final By fieldNameRegistrationPage = By.xpath(".//fieldset[1]//input");
+    private final By fieldEmailRegistrationPage = By.xpath(".//fieldset[2]//input");
+    private final By fieldPasswordRegistrationPage = By.xpath(".//fieldset[3]//input");
+    private final By buttonRegistrationRegistrationPage = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
+    private final By errorMessageRegistrationPage = By.xpath(".//p[@class='input__error text_type_main-default']");
+    private final By signInLinkRegistrationPage = By.xpath(".//a[@href='/login']");
 
     //Конструктор
     public RegistrationPage(WebDriver driver) {
@@ -33,8 +32,8 @@ public class RegistrationPage extends MainAbstractPage {
 
     public void buttonEnterLinkClick() {
         new WebDriverWait(driver, 5)
-                .until(ExpectedConditions.visibilityOfElementLocated(enterLinkRegistrationPage));
-        driver.findElement(enterLinkRegistrationPage).click();
+                .until(ExpectedConditions.visibilityOfElementLocated(signInLinkRegistrationPage));
+        driver.findElement(signInLinkRegistrationPage).click();
     }
 
     public boolean isPasswordErrorDisplayed() {

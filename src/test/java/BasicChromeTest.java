@@ -1,6 +1,6 @@
 import constants.Constants;
 import helper.UserHelper;
-import pageobjects.MainPage;
+import page_objects.MainPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

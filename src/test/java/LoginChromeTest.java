@@ -1,6 +1,6 @@
 import constants.Constants;
 import helper.UserRegistration;
-import pageobjects.*;
+import page_objects.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +35,7 @@ public class LoginChromeTest extends BasicChromeTest {
         objMainPage.clickPersonalAccountEnterButton();
         objLoginPage.inputLoginData(user.getEmail(), user.getPassword());
         objLoginPage.clickEnterButton();
-        assertEquals("Кнопка не сменила название", "Оформить заказ", objMainPage.test());
+        assertEquals("Кнопка не сменила название", "Оформить заказ", objMainPage.getPersonalAccountEnterButtonText());
     }
 
     @Test
@@ -44,7 +44,7 @@ public class LoginChromeTest extends BasicChromeTest {
         objMainPage.clickPersonalAccountTopButton();
         objLoginPage.inputLoginData(user.getEmail(), user.getPassword());
         objLoginPage.clickEnterButton();
-        assertEquals("Кнопка не сменила название", "Оформить заказ", objMainPage.test());
+        assertEquals("Кнопка не сменила название", "Оформить заказ", objMainPage.getPersonalAccountEnterButtonText());
     }
 
     @Test
@@ -55,7 +55,7 @@ public class LoginChromeTest extends BasicChromeTest {
         objRegistrationPage.buttonEnterLinkClick();
         objLoginPage.inputLoginData(user.getEmail(), user.getPassword());
         objLoginPage.clickEnterButton();
-        assertEquals("Кнопка не сменила название", "Оформить заказ", objMainPage.test());
+        assertEquals("Кнопка не сменила название", "Оформить заказ", objMainPage.getPersonalAccountEnterButtonText());
     }
 
     @Test
@@ -66,6 +66,6 @@ public class LoginChromeTest extends BasicChromeTest {
         objForgotPasswordPage.clickRememberPasswordLink();
         objLoginPage.inputLoginData(user.getEmail(), user.getPassword());
         objLoginPage.clickEnterButton();
-        assertEquals("Кнопка не сменила название", "Оформить заказ", objMainPage.test());
+        assertEquals("Кнопка не сменила название", "Оформить заказ", objMainPage.getPersonalAccountEnterButtonText());
     }
 }

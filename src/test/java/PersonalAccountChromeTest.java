@@ -1,5 +1,5 @@
 import helper.UserRegistration;
-import pageobjects.*;
+import page_objects.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -46,7 +46,7 @@ public class PersonalAccountChromeTest extends BasicChromeTest {
         objLoginPage.clickEnterButton();
         objMainPage.clickPersonalAccountTopButton();
         objPersonalAccountPage.clickConstructorLink();
-        assertTrue("Ошибка", objMainPage.isBurgerTextIsDisplayed());
+        assertTrue("Ошибка", objMainPage.isBurgerTextVisible());
     }
 
     @Test
@@ -57,7 +57,7 @@ public class PersonalAccountChromeTest extends BasicChromeTest {
         objLoginPage.clickEnterButton();
         objMainPage.clickPersonalAccountTopButton();
         objPersonalAccountPage.clickBurgerPicture();
-        assertTrue("Ошибка", objMainPage.isBurgerTextIsDisplayed());
+        assertTrue("Ошибка", objMainPage.isBurgerTextVisible());
     }
 
     @Test
