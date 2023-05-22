@@ -7,8 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PersonalAccountPage extends MainAbstractPage {
     //Локаторы
-    private By logoutButton = By.xpath("//*[@id=\"root\"]/div/main/div/nav/ul/li[3]/button");
-    private By burgerPicture = By.cssSelector("#root > div > header > nav > div > a > svg");
+    private By logoutButton = By.xpath(".//button[text()='Выход']");
+    private By burgerPicture = By.className("AppHeader_header__logo__2D0X2");
     private By constructorLink = By.className("AppHeader_header__link__3D_hX");
 
     // Конструктор
